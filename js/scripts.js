@@ -1,6 +1,6 @@
 // JavaScript/jQuery Business Logic
 // var translate = function(word) {
-//   if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+//   if () {
 //     return true;
 //   } else {
 //     return false;
@@ -14,7 +14,7 @@ $(document).ready(function() {
     var word = $("input#english").val();
     // var result = leapYear(year);
 
-    $(".translation").text(word);
+    $(".translation").text(word + "ay");
 
     // if (!result) {                 // same as writing if (result === false)
     //   $(".not").text("not");
