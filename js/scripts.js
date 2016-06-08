@@ -1,32 +1,26 @@
 // JavaScript/jQuery Business Logic
+var pigArray = [];
+function pigLatin(englishArray) {
+  if(englishArray[0] === "a" || englishArray[0] === "e" || englishArray[0] === "i" || englishArray[0] === "o" || englishArray[0] === "u") {
+  pigArray = pigArray.concat(englishArray);
+  pigArray.push("a", "y");
+  }
+
+  return pigArray.join("");
+  console.log(pigArray);
+};
+
+// JavaScript/jQuery Front-End Logic
 $(document).ready(function() {
   $("form#pig-latin-form").submit(function(event) {
     event.preventDefault();
-    var english = $("input#english").val();
-    var englishArray = english.split(" ");
-    console.log(englishArray);
-// var translate = function(word) {
-//   if () {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
 
-// JavaScript/jQuery User Interface Logic
+    var englishString = $("input#english").val();
+    var englishLowerCase = englishString.toLowerCase();
+    var englishArray = englishLowerCase.split("");
+    pigArray = pigLatin(englishArray)
 
-    var word = $("input#english").val();
-    // var result = leapYear(year);
-
-    $(".translation").text(word);
-
-    // if (!result) {                 // same as writing if (result === false)
-    //   $(".not").text("not");
-    // } else {
-    //   $(".not").text("");
-    // }
-
-    // alert("Great job!");
+    $(".translation").text(pigArray);
     $("#result").show();
   });
 });
