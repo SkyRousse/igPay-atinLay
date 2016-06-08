@@ -1,4 +1,10 @@
 // JavaScript/jQuery Business Logic
+$(document).ready(function() {
+  $("form#pig-latin-form").submit(function(event) {
+    event.preventDefault();
+    var english = $("input#english").val();
+    var englishArray = english.split(" ");
+    console.log(englishArray);
 // var translate = function(word) {
 //   if () {
 //     return true;
@@ -8,13 +14,11 @@
 // };
 
 // JavaScript/jQuery User Interface Logic
-$(document).ready(function() {
-  $("form#pig-latin-form").submit(function(event) {
-    event.preventDefault();
+
     var word = $("input#english").val();
     // var result = leapYear(year);
 
-    $(".translation").text(word + "ay");
+    $(".translation").text(word);
 
     // if (!result) {                 // same as writing if (result === false)
     //   $(".not").text("not");
@@ -22,7 +26,7 @@ $(document).ready(function() {
     //   $(".not").text("");
     // }
 
-    alert("Great job!");
+    // alert("Great job!");
     $("#result").show();
   });
 });
