@@ -10,10 +10,10 @@ _This is an Epicodus student project creating a web page that uses front-end use
 
 Behavior  | Input Example | Output Example
 ------------- | ------------- | -------------
-Inputted word(s) starts with a vowel then add "ay" to the end of the word(s).  | Apple  | APPLEAY
-Inputted word(s) start(s) with one or more consonants, move all of the first consecutive consonants to the end and add "ay" to the end of the word(s).  | Through the void  | OUGHTHRAY ETHAY OIDVAY
-Inputted word(s) start(s) with "qu", move the "u" with the "q" to the end and add "ay" to the end of the word(s).  | Quality queen  | ALITYQUAY EENQUAY
-Inputted word(s) start(s) with "y", treat "y" like a consonant and move it to the end and add "ay" to the end of the word(s).  | Yes you can  | ESYAY OUYAY ANCAY
+Inputted word(s) starts with a vowel then add "ay" to the end of the word(s).  | Apple  | Appleay
+Inputted word(s) start(s) with one or more consonants, move all of the first consecutive consonants to the end and add "ay" to the end of the word(s).  | Through the void  | oughThray ethay oidvay
+Inputted word(s) start(s) with "qu", move the "u" with the "q" to the end and add "ay" to the end of the word(s).  | Quality queen  | alityQuay eenquay
+Inputted word(s) start(s) with "y", treat "y" like a consonant and move it to the end and add "ay" to the end of the word(s).  | Yes you can  | esYay ouyay ancay
 
 
 ## Setup/Installation Requirements
