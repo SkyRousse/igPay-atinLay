@@ -1,74 +1,5 @@
-// business logic
-// var leapYear = function(year) {
-//   if (year === NaN) {
-//     return false;
-//   }
-// };
-
-var leapYear = function(year) {
-  if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-// user interface logic
-$(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
-    event.preventDefault();
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
-
-    $(".year").text(year);
-
-    if (!result) {                 // same as writing if (result === false)
-      $(".not").text("not");
-    } else {
-      $(".not").text("");
-    }
-
-    alert("Great job!");
-    $("#result").show();
-  });
-});
-
-// behavior 1 test
-// var leapYear = function(year) {
-//   return false;
-// };
-
-// behavior 2 test
-// var leapYear = function(year) {
-//   if (year % 4 === 0) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
-
-// behavior 3 test
-// var leapYear = function(year) {
-//   if (year % 100 === 0) {
-//     return false;
-//   } else if (year % 4 === 0) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
-
-// behavior 3.refactored test
-// var leapYear = function(year) {
-//   if ((year % 4 === 0) && (year % 100 != 0)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
-
-// behavior 4 test
-// var leapYear = function(year) {
+// JavaScript/jQuery Business Logic
+// var translate = function(word) {
 //   if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
 //     return true;
 //   } else {
@@ -76,12 +7,22 @@ $(document).ready(function() {
 //   }
 // };
 
-// jQuery User Interface
-// $(document).ready(function() {
-//   $("form#leap-year").submit(function(event) {
-//     event.preventDefault();
-//     var year = parseInt($("input#year").val());
-//     var result = leapYear(year);
-//     $("#result").text(result);
-//   });
-// });
+// JavaScript/jQuery User Interface Logic
+$(document).ready(function() {
+  $("form#pig-latin-form").submit(function(event) {
+    event.preventDefault();
+    var word = $("input#english").val();
+    // var result = leapYear(year);
+
+    $(".translation").text(word);
+
+    // if (!result) {                 // same as writing if (result === false)
+    //   $(".not").text("not");
+    // } else {
+    //   $(".not").text("");
+    // }
+
+    alert("Great job!");
+    $("#result").show();
+  });
+});
